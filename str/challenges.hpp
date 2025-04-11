@@ -43,6 +43,24 @@ std::string cesarCipherEncryptor(std::string password,int key);
  */
 std::string firstNonRepeatingCharacter(std::string);
 
+/**
+ * @brief Checks whether a given string is a palindrome.
+ *
+ * A palindrome is a string that reads the same forwards and backwards.
+ * This function uses a two-pointer approach to compare characters from
+ * both ends of the string and determines if they match until they meet
+ * in the middle.
+ *
+ * @param word The string to check. Assumes case sensitivity and no preprocessing.
+ * @return true if the string is a palindrome; false otherwise.
+ *
+ * @note This function prints the result to standard output as a side effect.
+ *       To make it purely functional (no I/O), consider removing std::cout lines.
+ *
+ * @example
+ * isPalindrome("racecar") → true
+ * isPalindrome("hello")   → false
+ */
 
 bool isPalindrome(std::string& word);
 

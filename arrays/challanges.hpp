@@ -47,6 +47,8 @@ std::vector<int> smallestDifference(std::vector<int> &arrayOne, std::vector<int>
  */
 bool isValidSequence(const std::vector<int>& array, const std::vector<int>& sequence);
 
+
+/*************************** [ Begin: Smallest Difference[HackerRank]  ] ***************************/
 /**
  * @brief Computes the minimum loss from selling a house after buying it at an earlier time.
  *
@@ -66,6 +68,11 @@ bool isValidSequence(const std::vector<int>& array, const std::vector<int>& sequ
  */
 int minimumLoss(const std::vector<int>& prices);
 
+/*************************** [ End: Smallest Difference[HackerRank]  ] ***************************/
+
+/*************************** [ Begin: Turnament Winner[AlgoExpert]  ] ***************************/
+std::string getWinner(std::vector<std::string>teams,int result);
+/*************************** [ End: Turnament Winner[AlgoExpert]  ] ***************************/
 
 
 #endif // ARRAYS_CHALLENGES_HPP

@@ -4,6 +4,7 @@
 #include <map>
 #include "iostream"
 
+/*************************** [ Begin: Two number sum ] ***************************/
 
 std::vector<int> twoNumberSum(std::vector<int>& array, int targetSum) {
     std::sort(array.begin() ,array.end());
@@ -26,17 +27,10 @@ std::vector<int> twoNumberSum(std::vector<int>& array, int targetSum) {
     return {};
 }
 
+/*************************** [ End: Two number sum ] ***************************/
 
-/**
- * @brief Checks if the given sequence is a valid subsequence of the array.
- *
- * A valid subsequence means all elements in the sequence appear in the array in the same order,
- * but not necessarily consecutively.
- *
- * @param array The main array of integers.
- * @param sequence The sequence to validate.
- * @return true if sequence is a valid subsequence of array; false otherwise.
- */
+
+/*************************** [ Begin: Is valid sequence  ] ***************************/
 bool isValidSequence(const std::vector<int>& array, const std::vector<int>& sequence) {
     size_t array_index=0;
     size_t sequence_index=0;
@@ -52,8 +46,10 @@ bool isValidSequence(const std::vector<int>& array, const std::vector<int>& sequ
     }
     return sequence_index==sequence.size();
 }
+/*************************** [ End: Is valid sequence  ] ***************************/
 
 
+/*************************** [ Begin: Smallest Difference[AlgoExpert]  ] ***************************/
 std::vector<int> smallestDifference(std::vector<int> &arrayOne, std::vector<int> &arrayTwo) {
     std ::sort(arrayOne.begin(),arrayOne.end());
     std ::sort(arrayOne.begin(),arrayTwo.end());
@@ -83,6 +79,7 @@ std::vector<int> smallestDifference(std::vector<int> &arrayOne, std::vector<int>
     }
 
 
+/*************************** [ Begin: Smallest Difference[HackerRank]  ] ***************************/
 int minimumLoss(const std::vector<int>& prices) {
     std::map<int,size_t> originalIndices;
     for (size_t i=0;i<prices.size();i++) {
@@ -110,4 +107,22 @@ int minimumLoss(const std::vector<int>& prices) {
     }
     return minLoss;
 }
+/*************************** [ Begin: Smallest Difference[HackerRank]  ] ***************************/
 
+
+std::string getWinner(std::vector<std::string>teams,int result) {
+    if(result==0) {
+        std::cout<<"Away team won"<<std::endl;
+        return teams[1];
+    }
+    else {
+        std::cout<<"Home team won"<<std::endl;
+        return teams[0];
+    }
+}
+
+
+std::string turnamentWinner(std::vector<std::string> competitions, std::vector<int> results) {
+
+    return "winner";
+}
