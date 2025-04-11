@@ -20,4 +20,24 @@
  */
 void printVector(const std::vector<int>& vec);
 
+
+/**
+ * @brief Reads a matrix of integers from standard input.
+ *
+ * Prompts for the number of rows and columns, then reads each element.
+ * The matrix is returned as a 2D std::vector.
+ */
+std::vector<std::vector<int>> readIntMatrix();
+
+/**
+ * @brief Prints a matrix of integers to standard output.
+ *
+ * Each row appears on a new line, and values are separated by spaces.
+ *
+ * @param matrix A 2D matrix of integers.
+ */
+void printMatrix(const std::vector<std::vector<int>>& matrix);
+
+
+
 #endif // UTILS_PRINT_HPP

@@ -32,3 +32,51 @@
 *.app
 
 cmake-build-debug
+.idea
+
+# Binaries
+*.out
+*.exe
+*.dll
+*.so
+*.dylib
+
+# Object files
+*.o
+*.obj
+
+# Compiled static and dynamic libs
+*.a
+*.lib
+
+# Build directories
+/build/
+/bin/
+/dist/
+/Debug/
+/Release/
+
+# CMake
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+Makefile
+
+# Code::Blocks
+*.depend
+*.layout
+*.cbp
+*.layout
+*.files
+
+# CLion / JetBrains IDEs
+.idea/
+cmake-build-*/
+
+# VS Code
+.vscode/
+
+# Misc
+*.log
+*.tmp
+*~

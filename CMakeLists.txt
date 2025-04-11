@@ -13,4 +13,11 @@ add_executable(algorithms-cpp
         linked_list/node.cpp
         linked_list/linked_list.hpp
         linked_list/linked_list.cpp
+        recursion/challenges.hpp
+        recursion/challenges.cpp
+        dynamic_programming/challenges.cpp
+        dynamic_programming/challenges.hpp
+        str/challenges.cpp
+        str/challenges.hpp
+        utils/template_utils.hpp
 )
