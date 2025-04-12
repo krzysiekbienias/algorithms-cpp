@@ -122,7 +122,21 @@ std::string getWinner(std::vector<std::string>teams,int result) {
 }
 
 
-std::string turnamentWinner(std::vector<std::string> competitions, std::vector<int> results) {
+std::string turnamentWinner(std::vector<std::vector<std::string>> competitions, std::vector<int> results) {
+    // prepare a container for teams
+
+    std::pmr::unordered_map<std::string,int> table;
+    for (const std::vector<std::string>& match : competitions) {
+        for (const std::string & team : match) {
+            table[team]=0;
+        }
+    }
+    std::cout<<"In competition we have following teams:"<<std::endl;
+    for (const auto & [k,v]:table) {
+        std::cout << k<<":"<<v<<'\n';
+    }
+
+
 
     return "winner";
 }

@@ -72,6 +72,7 @@ int minimumLoss(const std::vector<int>& prices);
 
 /*************************** [ Begin: Turnament Winner[AlgoExpert]  ] ***************************/
 std::string getWinner(std::vector<std::string>teams,int result);
+std::string turnamentWinner(std::vector<std::vector<std::string>> competitions, std::vector<int> results);
 /*************************** [ End: Turnament Winner[AlgoExpert]  ] ***************************/
 
 

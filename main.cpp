@@ -6,10 +6,10 @@
 // #define RUN_LINKED_LIST
 // #define RUN_HEAP
 // #define RUN_DYNAMIC_PROGRAMMING
-// #define  RUN_ARRAYS_CHALLENGES
+ #define  RUN_ARRAYS_CHALLENGES
 // #define  RUN_RECURSION_CHALLENGES
 // #define RUN_STL_UTILS
- #define RUN_STR
+ //#define RUN_STR
 
 
 #ifdef RUN_LINKED_LIST
@@ -58,15 +58,26 @@ int main() {
     std::cout<<std::endl;
     /*************************** [ End: Minimum Loss ] ***************************/
 
+
+
+
     std::vector<std::vector<int>> matrix = {
         {1, 0, 1},
         {0, 1, 0},
         {1, 0, 1}
     };
-    std::cout<<matrix[1][5];
-
-
-
+    std::cout<<matrix[1][5]<<std::endl;
+    std::cout<<"-------------------------"<<std::endl;
+    /*************************** [ Begin: Turnament Winner [AlgoExpert] ] ***************************/
+    std::cout<<"Tournament Wienner problem "<<std::endl;
+    std::vector<std::vector<std::string>> competitions = {
+        {"HTML", "C#"},
+        {"C#", "Python"},
+        {"Python", "HTML"}
+    };
+    std::vector<int> results={0,0,1};
+    turnamentWinner(competitions,results);
+    /*************************** [ Begin: Minimum Loss [AlgoExpert] ] ***************************/
 #endif
 
 

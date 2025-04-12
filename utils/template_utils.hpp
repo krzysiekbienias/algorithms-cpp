@@ -26,6 +26,17 @@ countOccurrences(const Container& input) {
 
 // Add other generic utility templates or function declarations here.
 
+
+template <typename A, typename B>
+auto zip(const A& a, const B& b) {
+    std::vector<std::pair<typename A::value_type, typename B::value_type>> zipped;
+    size_t size = std::min(a.size(), b.size());
+    for (size_t i = 0; i < size; ++i) {
+        zipped.emplace_back(a[i], b[i]);
+    }
+    return zipped;
+}
+
 /**
  * @brief Print elements in a container.
  */
