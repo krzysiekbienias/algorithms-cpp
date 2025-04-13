@@ -6,7 +6,7 @@
 // #define RUN_LINKED_LIST
 // #define RUN_HEAP
 // #define RUN_DYNAMIC_PROGRAMMING
- #define  RUN_ARRAYS_CHALLENGES
+// define  RUN_ARRAYS_CHALLENGES
 // #define  RUN_RECURSION_CHALLENGES
 // #define RUN_STL_UTILS
  //#define RUN_STR
@@ -25,7 +25,9 @@
 #include "utils/template_utils.hpp"
 #endif
 
-
+#ifndef EXERCISES_HPP
+#include "cpp_combinations/exercises.hpp"
+#endif
 
 #ifdef RUN_HEAP
 #include "heap/heap.hpp"
@@ -46,7 +48,12 @@
 
 
 int main() {
+
     std::cout << "=== Algorithm Playground ===\n";
+
+    ex76();
+
+
 
 
 #ifdef RUN_ARRAYS_CHALLENGES

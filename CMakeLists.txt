@@ -20,4 +20,6 @@ add_executable(algorithms-cpp
         str/challenges.cpp
         str/challenges.hpp
         utils/template_utils.hpp
+        cpp_combinations/exercises.hpp
+        cpp_combinations/exersises.cpp
 )
