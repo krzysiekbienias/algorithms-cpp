@@ -80,3 +80,9 @@ cmake-build-*/
 *.log
 *.tmp
 *~
+
+/xcode-build/
+/cmake-build-debug/
+/CMakeFiles/
+/CMakeCache.txt
+/*.xcodeproj

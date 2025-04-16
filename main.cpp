@@ -6,7 +6,7 @@
 // #define RUN_LINKED_LIST
 // #define RUN_HEAP
 // #define RUN_DYNAMIC_PROGRAMMING
-// define  RUN_ARRAYS_CHALLENGES
+# define  RUN_ARRAYS_CHALLENGES
 // #define  RUN_RECURSION_CHALLENGES
 // #define RUN_STL_UTILS
  //#define RUN_STR
@@ -51,8 +51,6 @@ int main() {
 
     std::cout << "=== Algorithm Playground ===\n";
 
-    ex76();
-
 
 
 
@@ -73,7 +71,7 @@ int main() {
         {0, 1, 0},
         {1, 0, 1}
     };
-    std::cout<<matrix[1][5]<<std::endl;
+    std::cout<<matrix[1][2]<<std::endl;
     std::cout<<"-------------------------"<<std::endl;
     /*************************** [ Begin: Turnament Winner [AlgoExpert] ] ***************************/
     std::cout<<"Tournament Wienner problem "<<std::endl;

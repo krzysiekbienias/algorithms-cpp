@@ -14,11 +14,11 @@ std::vector<int> twoNumberSum(std::vector<int>& array, int targetSum) {
     while (low_p<high_p) {
         int currentSum=array[low_p]+array[high_p];
         if (targetSum==currentSum){
-        return {array[low_p],array[high_p]};
+            return {array[low_p],array[high_p]};
         }
         else if (currentSum<targetSum) {
             low_p++;
-
+            
         }
         else {
             --high_p;
@@ -41,8 +41,8 @@ bool isValidSequence(const std::vector<int>& array, const std::vector<int>& sequ
         }
         else
         {array_index++;}
-
-
+        
+        
     }
     return sequence_index==sequence.size();
 }
@@ -68,15 +68,15 @@ std::vector<int> smallestDifference(std::vector<int> &arrayOne, std::vector<int>
         };
         if (arrayOne[i]<arrayTwo[j]) {
             i++;
-            }
+        }
         else{
             j++;
-
+            
         }
-
-        }
-    return closestPair;
+        
     }
+    return closestPair;
+}
 
 
 /*************************** [ Begin: Smallest Difference[HackerRank]  ] ***************************/
@@ -88,7 +88,7 @@ int minimumLoss(const std::vector<int>& prices) {
     //make copy of original index and sort it
     std::vector<int> sortedPrices=prices;
     std::sort(sortedPrices.begin(),sortedPrices.end());
-
+    
     int minLoss=std::numeric_limits<int>::max();
     for (size_t i=1;i<sortedPrices.size();i++) {
         int lower=sortedPrices[i-1];
@@ -103,7 +103,7 @@ int minimumLoss(const std::vector<int>& prices) {
             }
         }
         std::cout<<"Not valid transaction for "<< i <<" and"<<i-1<<"!"<<std::endl;
-
+        
     }
     return minLoss;
 }
@@ -124,8 +124,8 @@ std::string getWinner(std::vector<std::string>teams,int result) {
 
 std::string turnamentWinner(std::vector<std::vector<std::string>> competitions, std::vector<int> results) {
     // prepare a container for teams
-
-    std::pmr::unordered_map<std::string,int> table;
+    
+    std::unordered_map<std::string,int> table;
     for (const std::vector<std::string>& match : competitions) {
         for (const std::string & team : match) {
             table[team]=0;
@@ -135,8 +135,20 @@ std::string turnamentWinner(std::vector<std::vector<std::string>> competitions, 
     for (const auto & [k,v]:table) {
         std::cout << k<<":"<<v<<'\n';
     }
-
-
-
-    return "winner";
+    
+    for (size_t i =0;i<std::min(competitions.size(),results.size());i++) {
+        std::string winnig_team=getWinner(competitions[i],results[i]);
+        table[winnig_team]+=3;
+    }
+    
+    std::string winner;
+    int maxPoint=std::numeric_limits<int>::min();
+    for (const auto& [k,v]:table){
+        if (v>maxPoint) {
+            maxPoint=v;
+            winner=k;
+        }
+    }
+    
+    return winner;
 }
