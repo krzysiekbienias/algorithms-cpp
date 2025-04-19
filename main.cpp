@@ -1,5 +1,6 @@
 #include <iostream>
 #include "utils/vector.hpp"
+#include <ranges>
 
 
 
@@ -50,6 +51,9 @@
 int main() {
 
     std::cout << "=== Algorithm Playground ===\n";
+    std::vector<int> v = {1, 2, 3, 4, 5};
+    std::ranges::copy(v, std::ostream_iterator<int>(std::cout, " "));
+    std::cout<<std::endl;
 
 
 
@@ -58,6 +62,7 @@ int main() {
     /*************************** [ Begin: Minimum Loss ] ***************************/
     std::cout << "Minimum Loss Problem";
     std::vector<int> prices={20,7,8,2,5};
+    std::cout<<std::endl;
     printVector(prices);
     std::cout << minimumLoss(prices);
     std::cout<<std::endl;

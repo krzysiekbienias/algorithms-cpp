@@ -107,7 +107,8 @@ int minimumLoss(const std::vector<int>& prices) {
     }
     return minLoss;
 }
-/*************************** [ Begin: Smallest Difference[HackerRank]  ] ***************************/
+/*************************** [ Begin: Tournament Winner[AlgoExpert]  ] ***************************/
+
 
 
 std::string getWinner(std::vector<std::string>teams,int result) {
@@ -152,4 +153,35 @@ std::string turnamentWinner(std::vector<std::vector<std::string>> competitions, 
     std::cout<<"Team "<<winner<<" took first place"<<std::endl;
     
     return winner;
+
+ }
+/*************************** [ Begin: Sorted Squared Array [AlgoExpert]  ] ***************************/
+
+std::vector<int> sortedSquared(const std::vector<int>& array){
+    std::vector<int> sortedArray;
+    sortedArray.reserve(array.size());
+    for (int num : array){
+        sortedArray.push_back(num*num);
+    }
+    std::sort(sortedArray.begin(),sortedArray.end());
+    return sortedArray;
+    
+    
 }
+/*************************** [ End: Sorted Squared Array [AlgoExpert]  ] ***************************/
+
+
+/*************************** [ Begin: Move Element To The End [AlgoExpert]  ] ***************************/
+
+std::vector<int> moveElementToTheEnd(const std::vector<int>& array ,int toMove){
+    std::vector<int> arrayCoppy=array;
+    int pointer{0};
+    for (int i=0;i<arrayCoppy.size();++i){
+        if (arrayCoppy[i]!=toMove){
+            std::swap(arrayCoppy[i], arrayCoppy[pointer]);
+            ++pointer;
+        }
+    }
+    return arrayCoppy;
+}
+

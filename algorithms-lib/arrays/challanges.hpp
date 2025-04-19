@@ -73,7 +73,11 @@ int minimumLoss(const std::vector<int>& prices);
 /*************************** [ Begin: Turnament Winner[AlgoExpert]  ] ***************************/
 std::string getWinner(std::vector<std::string>teams,int result);
 std::string turnamentWinner(std::vector<std::vector<std::string>> competitions, std::vector<int> results);
+std::vector<int> moveElementToTheEnd(const std::vector<int> & array,int toMove);
 /*************************** [ End: Turnament Winner[AlgoExpert]  ] ***************************/
 
+/*************************** [ Begin: Sorted Squared  Array[AlgoExpert]  ] ***************************/
+std::vector<int> sortedSquared(const std::vector<int>& array);
+/*************************** [ Array: Sorted Squared  Array[AlgoExpert]   ] ***************************/
 
 #endif // ARRAYS_CHALLENGES_HPP
